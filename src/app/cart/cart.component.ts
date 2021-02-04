@@ -9,6 +9,7 @@ import { FormBuilder } from '@angular/forms';
 })
 export class CartComponent implements OnInit {
   items = this.cartService.getItems();
+  total = this.cartService.getShippingTotal();
   checkoutForm = this.formBuilder.group({
     name: '',
     address: '',

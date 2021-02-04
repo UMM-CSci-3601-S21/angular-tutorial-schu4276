@@ -9,8 +9,15 @@
   <span>{{ item.price | currency }}</span>
 </div>
 
+<div *ngIf="items.length >0" class="total">
+  <h3>Total = {{total | currency }}</h3>
+
+
+
+</div>
+
 <div>
-    <form [formGroup]="checkoutForm">
+    <form class="form" [formGroup]="checkoutForm">
     <label for="name">
       Name
     </label>
@@ -24,6 +31,8 @@
     <input id="address" type="text"
     formControlName="address">
   </div>
+
+
 
 
   <div>
