@@ -8,6 +8,7 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+  product;
   items = this.cartService.getItems();
   total = this.cartService.getShippingTotal();
   checkoutForm = this.formBuilder.group({
@@ -20,11 +21,17 @@ export class CartComponent implements OnInit {
     private formBuilder: FormBuilder,
   ) { }
 
+
   onSubmit(): void {
     this.items = this.cartService.clearCart();
     console.warn('Your order has been submitted',
     this.checkoutForm.value);
     this.checkoutForm.reset();
+
+  }
+  deleteItem(product){
+    this.cartService.deleteItem(product);
+    window.alert('Product has been removed from cart');
 
   }
 

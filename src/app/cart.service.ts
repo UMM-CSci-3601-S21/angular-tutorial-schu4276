@@ -33,5 +33,9 @@ export class CartService {
     }
     return total;
   }
+  deleteItem(product){
+    this.items.splice(this.items.indexOf(product))
+
+  }
 
 }
