@@ -25,7 +25,7 @@ export class CartService {
   }
 
   getShippingPrices(){
-    return this.http.get('/assets/shipping.json' ,);
+    return this.http.get('./assets/shipping.json' ,);
   }
   getShippingTotal(){
     let total=0;
@@ -38,6 +38,6 @@ export class CartService {
     this.items.splice(this.items.indexOf(product))
 
   }
-  
+
 
 }
