@@ -9,7 +9,7 @@
 }
 
 body {
-  background-image: url("/assets/background.jpg");
+  background-image: url("./assets/background.jpg");
   background-attachment: fixed;
   margin-left:10%;
   margin-right:10%;
