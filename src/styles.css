@@ -2,105 +2,53 @@
 
 * {
   font-family: 'Roboto', Arial, sans-serif;
-  color: black;
+  color: #616161;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background-image: url("./assets/background.jpg");
-  background-attachment: fixed;
-  margin-left:10%;
-  margin-right:10%;
-
-}
-.cart-item {
-  display:flex;
-  border: 3px solid #447A97;
-  border-radius: 25px;
-  margin-top: 10px;
-  margin-bottom:10px;
-  margin-right:20%;
-  color:#fff;
-}
-.productdes{
-  border:2px solid #fff;
-  background-color: #fff;
-  opacity:75%;
-  border-radius: 10px;
-  margin: 20px;
-}
-
-.descriptions{
-  margin:10px;
-  padding:0;
-  color:black;
-
+  margin: 0;
 }
 
 .container {
   display: flex;
   flex-direction: row;
-
 }
 
 router-outlet + *  {
   padding: 0 16px;
 }
 
+/* Text */
+
+h1 {
+  font-size: 32px;
+}
 
 h2 {
-  color:#fff;
-  margin-left:10%;
   font-size: 20px;
 }
 
-h3{
-  margin-left:2%;
-  color:#fff;
+h1, h2 {
+  font-weight: lighter;
 }
 
-.description p {
+p {
   font-size: 14px;
-  text-align: center;
-  margin:5%;
-  opacity:100%;
-  font: bold 16px #333;
-
-}
-.details h3{
-  color:black;
-  padding-top: 10px;
-}
-.details{
-  margin-left:10%;
-  background-color: #fff;
-  opacity: 75%;
-
-
-}
-.details p, .details h4{
-  padding-left:10px;
-}
-
-
-p a{
-
-  color:white;
-
 }
 
 /* Hyperlink */
 
 a {
   cursor: pointer;
-  color:#333;
+  color: #1976d2;
   text-decoration: none;
 }
 
 a:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 /* Input */
@@ -119,26 +67,19 @@ label {
   margin-bottom: 4px;
   display: block;
   text-transform: uppercase;
-  color:#fff;
 }
-
 
 /* Button */
 .button, button {
   display: inline-flex;
   align-items: center;
-  margin-left:25%;
-  padding: 10px 10px;
-  border-radius: 5px;
+  padding: 8px 16px;
+  border-radius: 2px;
   font-size: 14px;
   cursor: pointer;
   background-color: #1976d2;
   color: white;
   border: none;
-}
-.notify{
-  margin-bottom:0px ;
-
 }
 
 .button:hover, button:hover {
@@ -155,11 +96,11 @@ label {
 
 .fancy-button {
   background-color: white;
-  color: black;
+  color: #1976d2;
 }
 
 .fancy-button i.material-icons {
-  color: black;
+  color: #1976d2;
   padding-right: 4px;
 }
 
@@ -168,8 +109,7 @@ label {
 app-top-bar {
   width: 100%;
   height: 68px;
-  background-color:#fff ;
-  opacity:75%;
+  background-color: #1976d2;
   padding: 16px;
   display: flex;
   flex-direction: row;
@@ -178,7 +118,7 @@ app-top-bar {
 }
 
 app-top-bar h1 {
-  color:black;
+  color: white;
   margin: 0;
 }
 
@@ -189,13 +129,10 @@ app-top-bar h1 {
   min-width: 400px;
   max-width: 450px;
   display: flex;
-  color:black;
   flex-direction: row;
   justify-content: space-between;
-  padding-top:10px;
+  padding: 16px 32px;
   margin-bottom: 8px;
-  border-radius: 3px;
-  background-color:#fff;
-  opacity: 75%;
+  border-radius: 2px;
+  background-color: #EEEEEE;
 }
-
