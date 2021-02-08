@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CartService {
   items = [];
+  total;
 
   constructor(
     private http: HttpClient
@@ -24,7 +25,7 @@ export class CartService {
   }
 
   getShippingPrices(){
-    return this.http.get('/assets/shipping.json');
+    return this.http.get('/assets/shipping.json' ,);
   }
   getShippingTotal(){
     let total=0;
@@ -37,5 +38,6 @@ export class CartService {
     this.items.splice(this.items.indexOf(product))
 
   }
+  
 
 }

@@ -24,6 +24,7 @@ export class CartComponent implements OnInit {
 
   onSubmit(): void {
     this.items = this.cartService.clearCart();
+    this.total= 0;
     console.warn('Your order has been submitted',
     this.checkoutForm.value);
     this.checkoutForm.reset();
@@ -32,10 +33,12 @@ export class CartComponent implements OnInit {
   deleteItem(product){
     this.cartService.deleteItem(product);
     window.alert('Product has been removed from cart');
+    this.total = this.cartService.getShippingTotal();
 
   }
 
   ngOnInit(): void {
+
   }
 
 }
